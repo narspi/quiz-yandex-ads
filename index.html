@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/main.min.css" type="text/css">
+    <title>главная страница</title>
+    <script>
+        // root --vh --widthContainer
+        let vh = window.innerHeight * 0.01; 
+    
+        const doc = document.documentElement;
+        doc.style.setProperty("--vh", "".concat(vh, "px"));
+    
+        window.addEventListener("resize", function () {
+          vh = window.innerHeight * 0.01;
+          doc.style.setProperty("--vh", "".concat(vh, "px"));
+        }); 
+    
+        //support webp
+        function testWebP(elem) {
+          var webP = new Image();
+          webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+    
+          webP.onload = webP.onerror = function () {
+            webP.height === 2 ? elem.classList.add("webp") : elem.classList.add("no-webp");
+          };
+        }
+        testWebP(doc);
+    </script></head>
+<body>
+    
+    <main class="main">
+        <section class="top">
+            <div class="container top__wrapper">
+                <div class="top__inner">
+                    <div class="top__title">
+                        <h1 class="top__title-top">Услуги по настройке Яндекс Директ</h1>
+                        <p class="top__title-bottom">Гарантированно получайте новых клиентов в свой бизнес за счёт рекламы  Яндекс Директ от специалиста с опытом 10 лет.</p>
+                    </div>
+                    <a class="top__quiz-link" href="/quiz.html">Рассчитать стоимость</a>
+                    <p class="top__descr">Ответьте на несколько простых вопросов чтобы рассчитать стоимость настройки и сроки</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div class="footer">
+      <div class="container">
+            <a href="https://prodvigator-lab.turbo.site" class=" footer__link">
+                Упаковка и разработка сайта Григорий Михайлов <b><u>https://prodvigator-lab.turbo.site</u></b>
+            </a>
+      </div>
+    </div>    <script src="js/main.min.js"></script>
+</body>
+</html>
